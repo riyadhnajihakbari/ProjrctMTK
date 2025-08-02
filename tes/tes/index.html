@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Perhitungan Volume Benda Putar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/renderers/CSS2DRenderer.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistem Perhitungan Volume Benda Putar</h1>
+        <form id="form">
+            <label for="function">Masukkan fungsi f(x):</label>
+            <input type="text" id="function" required>
+
+            <label for="a">Batas bawah (a):</label>
+            <input type="number" id="a" required>
+
+            <label for="b">Batas atas (b):</label>
+            <input type="number" id="b" required>
+
+            <button type="submit" id="hitung">Hitung Volume</button>
+        </form>
+
+        <div class="volume-result">
+            <p id="rumus" class="result-text"></p>
+            <p id="hasil" class="result-text"></p>
+        </div>
+
+        <div class="visualization-container" style="display: none;">
+            <div id="threejs-canvas-container" class="threejs-canvas"></div>
+            <div id="canvas-2d-container">
+                <canvas id="canvas-2d" width="600" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
